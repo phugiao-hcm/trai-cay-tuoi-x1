@@ -1,11 +1,11 @@
 <template>
-  <div class="max-w-[1200px] mx-auto px-4">
-    <HeroSection />
-    <FlashSaleSlider />
-    <FlashSaleBanner />
-    <ProductSection />
-    <ProductGrid />
-  </div>
+    <div>
+        <HeroSection />
+        <FlashSaleSlider />
+        <FlashSaleBanner />
+        <ProductSection />
+        <ProductGrid />
+    </div>
 </template>
 
 <script setup>
