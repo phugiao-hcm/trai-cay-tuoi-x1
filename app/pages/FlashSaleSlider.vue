@@ -36,7 +36,7 @@
             >
                 <SwiperSlide v-for="prod in products" :key="prod.id">
                     <div
-                        class="border rounded-lg overflow-hidden bg-white hover:shadow-lg transition"
+                        class="shadow rounded-lg overflow-hidden bg-white hover:shadow-lg transition"
                     >
                         <div class="relative">
                             <img

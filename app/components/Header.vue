@@ -1,5 +1,5 @@
 <template>
-    <header class="bg-white sticky top-0 z-50 shadow-md">
+    <header class="bg-green-50 sticky top-0 z-50 shadow-md">
         <div
             class="container mx-auto px-4 py-3 flex justify-between items-center"
         >
@@ -10,7 +10,7 @@
 
             <!-- Desktop Menu -->
             <nav
-                class="hidden md:flex space-x-6 text-sm font-medium text-gray-700"
+                class="hidden md:flex space-x-6 text-sm font-medium text-green-800"
             >
                 <NuxtLink to="/" class="hover:text-green-600"
                     >Trang chủ</NuxtLink
@@ -26,7 +26,7 @@
 
             <!-- Hamburger -->
             <button
-                class="md:hidden text-gray-700"
+                class="md:hidden text-green-800"
                 @click="open = !open"
                 aria-label="Menu"
             >
@@ -66,18 +66,18 @@
         <!-- Mobile Menu -->
         <div
             v-if="open"
-            class="md:hidden bg-white px-4 pb-4 space-y-2 animate-slide-down"
+            class="md:hidden bg-green-50 px-4 pb-4 space-y-2 border-t border-green-100 animate-slide-down"
         >
-            <NuxtLink to="/" class="block text-gray-700 hover:text-green-600"
+            <NuxtLink to="/" class="block text-green-800 hover:text-green-600"
                 >Trang chủ</NuxtLink
             >
-            <NuxtLink to="/" class="block text-gray-700 hover:text-green-600"
+            <NuxtLink to="/" class="block text-green-800 hover:text-green-600"
                 >Sản phẩm</NuxtLink
             >
-            <NuxtLink to="/" class="block text-gray-700 hover:text-green-600"
+            <NuxtLink to="/" class="block text-green-800 hover:text-green-600"
                 >Giới thiệu</NuxtLink
             >
-            <NuxtLink to="/" class="block text-gray-700 hover:text-green-600"
+            <NuxtLink to="/" class="block text-green-800 hover:text-green-600"
                 >Liên hệ</NuxtLink
             >
         </div>

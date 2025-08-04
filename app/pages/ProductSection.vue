@@ -1,20 +1,23 @@
 <template>
     <div class="max-w-[1200px] mx-auto px-4">
         <section class="py-10">
+            <!-- Tiêu đề -->
             <div class="text-center mb-8">
                 <h2 class="text-3xl font-bold text-orange-500">
                     Quà tặng trái cây
                 </h2>
             </div>
+
+            <!-- Lưới sản phẩm -->
             <div
                 class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5"
             >
                 <div
                     v-for="(item, index) in products"
                     :key="index"
-                    class="border rounded-lg shadow-sm p-3 flex flex-col justify-between relative bg-white"
+                    class="rounded-lg shadow hover:shadow-md p-3 flex flex-col justify-between relative bg-white transition"
                 >
-                    <!-- Tag -->
+                    <!-- Tag hết hàng -->
                     <div
                         v-if="item.soldOut"
                         class="absolute top-2 left-2 bg-gray-800 text-white text-xs px-2 py-1 rounded"
@@ -22,14 +25,14 @@
                         Tạm hết hàng
                     </div>
 
-                    <!-- Image -->
+                    <!-- Ảnh -->
                     <img
                         :src="item.image"
                         :alt="item.name"
                         class="object-cover w-full h-40 rounded"
                     />
 
-                    <!-- Info -->
+                    <!-- Thông tin -->
                     <div class="mt-3">
                         <p
                             class="text-sm font-medium line-clamp-2 min-h-[40px]"
@@ -41,12 +44,12 @@
                         </p>
                     </div>
 
-                    <!-- Button -->
+                    <!-- Nút chọn mua -->
                     <button
-                        class="mt-3 w-full text-sm font-medium border rounded py-1 transition"
+                        class="mt-3 w-full text-sm font-medium rounded py-1 border transition"
                         :class="
                             item.soldOut
-                                ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                                ? 'bg-gray-100 text-gray-400 cursor-not-allowed border-gray-300'
                                 : 'bg-white text-orange-500 border-orange-500 hover:bg-orange-50'
                         "
                         :disabled="item.soldOut"
@@ -58,6 +61,7 @@
         </section>
     </div>
 </template>
+
 
 <script setup>
 const products = [

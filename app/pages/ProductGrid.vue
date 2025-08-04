@@ -1,27 +1,38 @@
 <template>
     <div class="max-w-[1200px] mx-auto px-4">
         <section class="px-4 py-8">
+            <!-- Tiêu đề -->
             <h2 class="text-xl font-bold mb-4">Sản phẩm nổi bật</h2>
+
+            <!-- Lưới sản phẩm -->
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
                 <div
                     v-for="prod in products"
                     :key="prod.id"
-                    class="border rounded-lg overflow-hidden shadow hover:shadow-lg transition bg-white"
+                    class="rounded-lg overflow-hidden shadow hover:shadow-lg transition bg-white"
                 >
+                    <!-- Ảnh sản phẩm -->
                     <img
                         :src="prod.image"
-                        alt="prod.name"
+                        :alt="prod.name"
                         class="w-full h-40 object-cover"
                     />
-                    <div class="p-2">
-                        <h3 class="text-sm font-semibold">{{ prod.name }}</h3>
-                        <p class="text-red-500 font-bold">{{ prod.price }}</p>
+
+                    <!-- Thông tin -->
+                    <div class="p-3">
+                        <h3 class="text-sm font-semibold line-clamp-2">
+                            {{ prod.name }}
+                        </h3>
+                        <p class="text-red-500 font-bold mt-1">
+                            {{ prod.price }}
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
     </div>
 </template>
+
 
 <script setup>
 const products = [
